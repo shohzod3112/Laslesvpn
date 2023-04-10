@@ -1,0 +1,50 @@
+@import "./varialbe";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: $fRubik;
+}
+
+.container{
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@mixin title(){
+    &_h2{
+        width: 40%;
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+    &_p{
+        width: 45%;
+        font-weight: 400;
+        color: #4F5665;
+    }
+
+    @media (max-width: 1150px){
+
+        &_h2{
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 1000px){
+        
+        &_h2{
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@mixin tugmalar(){
+    color: white;
+    background-color: $btncolor;
+    padding: 1rem 3rem;
+    border-radius: 0.6rem;
+}
